@@ -9,13 +9,18 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up()
     {
-        Schema::create('menus', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
-    }
+    Schema::create('menus', function (Blueprint $table) {
+        $table->id();
+        $table->string('nama');
+        $table->text('deskripsi')->nullable(); 
+        $table->integer('harga');
+        $table->string('gambar')->nullable(); 
+        $table->boolean('is_available')->default(true); 
+        $table->timestamps();
+    });
+}
 
     /**
      * Reverse the migrations.
