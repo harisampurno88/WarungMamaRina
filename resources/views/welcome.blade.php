@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Dapur Mama Rina — Spesial Ayam Geprek Sambel Ijo</title>
+    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('favicon.png') }}">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -302,6 +304,7 @@
                             </div>
 
                             @if ($menu->is_available)
+<<<<<<< HEAD
                                 {{-- Tombol Hijau + Pesan Sekarang (Menambah ke Keranjang di Latar Belakang) --}}
                                 <button
                                     type="button"
@@ -383,7 +386,11 @@
                     </div>
                     <h3 class="font-bold text-stone-900">3. Konfirmasi Pesanan</h3>
                     <p class="mt-2 text-sm text-stone-500">
+<<<<<<< HEAD
                         Pesanan tersimpan dengan status pending dan siap diproses oleh Dapur Mama Rina.
+=======
+                        Pesanan akan diproses setelah alur pemesanan diaktifkan.
+>>>>>>> origin/backend-api
                     </p>
                 </div>
             </div>
