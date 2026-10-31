@@ -227,7 +227,9 @@
                                 @endif
                             </div>
 
+                            {{-- Bagian tombol pesanan yang sudah diperbaiki --}}
                             @if ($menu->is_available)
+<<<<<<< HEAD
                                 <form action="{{ route('order.store') }}" method="POST">
                                     @csrf
 
@@ -244,6 +246,14 @@
                                         + Pesan Sekarang
                                     </button>
                                 </form>
+=======
+                                <a
+                                    href="{{ route('order.create', $menu->id) }}"
+                                    class="block w-full rounded-xl bg-orange-600 px-4 py-3 text-center text-sm font-bold text-white transition hover:bg-orange-700"
+                                >
+                                    Pesan Sekarang
+                                </a>
+>>>>>>> origin/backend-api
                             @else
                                 <button
                                     type="button"
@@ -310,6 +320,7 @@
                     <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-100 text-2xl">
                         🍱
                     </div>
+                    {{-- Format angka dirapikan ke dalam tag h3 --}}
                     <h3 class="font-bold text-stone-900">1. Pilih Menu</h3>
                     <p class="mt-2 text-sm text-stone-500">
                         Pilih makanan favoritmu yang tersedia di katalog Dapur Mama Rina.
@@ -332,7 +343,11 @@
                     </div>
                     <h3 class="font-bold text-stone-900">3. Konfirmasi Pesanan</h3>
                     <p class="mt-2 text-sm text-stone-500">
+<<<<<<< HEAD
                         Pesanan dimasak dadakan dan siap diantar hangat ke tempatmu.
+=======
+                        Pesanan tersimpan dengan status menunggu (pending). Pembayaran belum diproses melalui aplikasi.
+>>>>>>> origin/backend-api
                     </p>
                 </div>
 
