@@ -342,6 +342,55 @@
         </div>
     </section>
 
+    {{-- Lokasi Kedai --}}
+    <section class="bg-stone-50 py-14">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mb-8 text-center">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-600">
+                    Lokasi Kami
+                </span>
+                <h2 class="mt-1 text-3xl font-extrabold text-stone-900">
+                    Temukan Dapur Mama Rina
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 items-center gap-6 overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-sm lg:grid-cols-2">
+                <div class="p-6 sm:p-8">
+                    <div class="mb-4 inline-flex items-center gap-2 rounded-full bg-brand-100 px-3 py-1.5 text-xs font-bold uppercase text-brand-700">
+                        📍 Alamat Kedai
+                    </div>
+
+                    <h3 class="text-2xl font-extrabold text-stone-900">Dapur Mama Rina</h3>
+                    <p class="mt-4 text-base leading-relaxed text-stone-600">
+                        633H+3QM, Padang Sakti, Kec. Muara Satu, Kota Lhokseumawe, Aceh 24355
+                    </p>
+
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=633H%2B3QM%2C+Padang+Sakti%2C+Kec.+Muara+Satu%2C+Kota+Lhokseumawe%2C+Aceh+24355"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="mt-6 inline-flex rounded-xl bg-brand-600 px-5 py-3 text-sm font-bold text-white transition hover:bg-brand-700"
+                    >
+                        Buka di Google Maps
+                    </a>
+                </div>
+
+                <div class="h-[320px] w-full border-t border-stone-200 lg:h-full lg:border-l lg:border-t-0">
+                    <iframe
+                        src="https://www.google.com/maps?q=633H%2B3QM%2C%20Padang%20Sakti%2C%20Kec.%20Muara%20Satu%2C%20Kota%20Lhokseumawe%2C%20Aceh%2024355&z=16&output=embed"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Lokasi Dapur Mama Rina di Google Maps"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     {{-- Footer --}}
     <footer class="border-t border-stone-200 bg-stone-50 py-8">
