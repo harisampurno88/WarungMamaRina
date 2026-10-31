@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Dapur Mama Rina — Spesial Ayam Geprek Sambel Ijo</title>
     <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
     <link rel="apple-touch-icon" href="{{ asset('favicon.png') }}">
+
+    <title>Dapur Mama Rina — Spesial Ayam Geprek Sambel Ijo</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -75,6 +76,7 @@
                 <a href="#beranda" class="transition hover:text-brand-600">Beranda</a>
                 <a href="#menu" class="transition hover:text-brand-600">Daftar Menu</a>
                 <a href="#cara-pesan" class="transition hover:text-brand-600">Cara Pesan</a>
+                <a href="#lokasi" class="transition hover:text-brand-600">Lokasi</a>
             </nav>
 
             <div class="flex items-center gap-2.5 sm:gap-3">
@@ -304,8 +306,6 @@
                             </div>
 
                             @if ($menu->is_available)
-<<<<<<< HEAD
-                                {{-- Tombol Hijau + Pesan Sekarang (Menambah ke Keranjang di Latar Belakang) --}}
                                 <button
                                     type="button"
                                     onclick="tambahKePesanan({{ $menu->id }}, '{{ addslashes($menu->nama) }}', {{ $menu->harga }}, '{{ $menu->gambar ? asset('storage/' . $menu->gambar) : '' }}')"
@@ -386,12 +386,63 @@
                     </div>
                     <h3 class="font-bold text-stone-900">3. Konfirmasi Pesanan</h3>
                     <p class="mt-2 text-sm text-stone-500">
-<<<<<<< HEAD
                         Pesanan tersimpan dengan status pending dan siap diproses oleh Dapur Mama Rina.
-=======
-                        Pesanan akan diproses setelah alur pemesanan diaktifkan.
->>>>>>> origin/backend-api
                     </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- Lokasi Kami (Dari Branch backend-api) --}}
+    <section id="lokasi" class="bg-stone-50 py-14">
+        <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <div class="rounded-3xl border border-stone-200 bg-white p-6 shadow-sm sm:p-8">
+                <div class="mb-6 text-center">
+                    <span class="text-xs font-bold uppercase tracking-wider text-brand-600">
+                        Lokasi
+                    </span>
+                    <h2 class="mt-1 text-3xl font-extrabold text-stone-900">
+                        Kantor & Lokasi Dapur Mama Rina
+                    </h2>
+                </div>
+
+                <div class="grid gap-6 md:grid-cols-[1.2fr_0.8fr] md:items-center">
+                    <div class="rounded-2xl border border-stone-200 bg-stone-50 p-5">
+                        <div class="mb-3 flex items-center gap-3">
+                            <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-100 text-xl">📍</div>
+                            <div>
+                                <p class="text-sm font-semibold uppercase tracking-wide text-stone-500">Alamat</p>
+                                <p class="text-lg font-bold text-stone-900">Dapur Mama Rina</p>
+                            </div>
+                        </div>
+
+                        <p class="text-base leading-relaxed text-stone-600">
+                            633H+3QM, Padang Sakti, Kec. Muara Satu, Kota Lhokseumawe, Aceh 24355
+                        </p>
+
+                        <a
+                            href="https://www.google.com/maps/search/?api=1&query=633H%2B3QM%2C+Padang+Sakti%2C+Kec.+Muara+Satu%2C+Kota+Lhokseumawe%2C+Aceh+24355"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="mt-5 inline-flex items-center gap-2 rounded-xl bg-brand-600 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-brand-700"
+                        >
+                            <span>🧭</span>
+                            Buka di Google Maps
+                        </a>
+                    </div>
+
+                    <div class="overflow-hidden rounded-2xl border border-stone-200 bg-stone-100">
+                        <iframe
+                            src="https://www.google.com/maps?q=633H%2B3QM%2C%20Padang%20Sakti%2C%20Kec.%20Muara%20Satu%2C%20Kota%20Lhokseumawe%2C%20Aceh%2024355&output=embed"
+                            width="100%"
+                            height="260"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Lokasi Dapur Mama Rina"
+                        ></iframe>
+                    </div>
                 </div>
             </div>
         </div>
@@ -415,7 +466,7 @@
         </div>
     </footer>
 
-    {{-- Floating Bar Ringkasan Pesanan (Muncul otomatis saat ada menu yang dipilih) --}}
+    {{-- Floating Bar Ringkasan Pesanan --}}
     <div id="floatingCartBar" class="fixed bottom-5 left-4 right-4 z-40 mx-auto hidden max-w-2xl transform transition-all duration-300">
         <div class="flex items-center justify-between gap-4 rounded-2xl bg-stone-900/95 p-3.5 sm:p-4 text-white shadow-2xl backdrop-blur border border-stone-700">
             <div class="flex items-center gap-3">
@@ -453,7 +504,6 @@
         </div>
 
         <div class="flex-1 overflow-y-auto p-5">
-            {{-- Keadaan Keranjang Kosong --}}
             <div id="cartEmptyState" class="py-12 text-center text-stone-500">
                 <div class="mb-3 text-5xl">🛒</div>
                 <p class="text-sm font-bold text-stone-700">Keranjang masih kosong</p>
@@ -462,10 +512,8 @@
                 </p>
             </div>
 
-            {{-- Wadah List Item yang Ditambahkan --}}
             <div id="cartItemsContainer" class="space-y-3"></div>
 
-            {{-- Form Identitas Pemesan & Pembayaran --}}
             <form id="multiOrderForm" action="{{ route('order.store') }}" method="POST" class="mt-6 hidden border-t border-stone-200 pt-5 space-y-4">
                 @csrf
 
