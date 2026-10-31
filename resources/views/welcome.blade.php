@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Dapur Mama Rina — Spesial Ayam Geprek Sambel Ijo</title>
-    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
-    <link rel="apple-touch-icon" href="{{ asset('favicon.png') }}">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -344,6 +342,61 @@
         </div>
     </section>
 
+
+    {{-- Lokasi Kami --}}
+    <section class="bg-stone-50 py-14">
+        <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <div class="rounded-3xl border border-stone-200 bg-white p-6 shadow-sm sm:p-8">
+                <div class="mb-6 text-center">
+                    <span class="text-xs font-bold uppercase tracking-wider text-brand-600">
+                        Lokasi
+                    </span>
+                    <h2 class="mt-1 text-3xl font-extrabold text-stone-900">
+                        Kantor & Lokasi Dapur Mama Rina
+                    </h2>
+                </div>
+
+                <div class="grid gap-6 md:grid-cols-[1.2fr_0.8fr] md:items-center">
+                    <div class="rounded-2xl border border-stone-200 bg-stone-50 p-5">
+                        <div class="mb-3 flex items-center gap-3">
+                            <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-100 text-xl">📍</div>
+                            <div>
+                                <p class="text-sm font-semibold uppercase tracking-wide text-stone-500">Alamat</p>
+                                <p class="text-lg font-bold text-stone-900">Dapur Mama Rina</p>
+                            </div>
+                        </div>
+
+                        <p class="text-base leading-relaxed text-stone-600">
+                            633H+3QM, Padang Sakti, Kec. Muara Satu, Kota Lhokseumawe, Aceh 24355
+                        </p>
+
+                        <a
+                            href="https://www.google.com/maps/search/?api=1&query=633H%2B3QM%2C+Padang+Sakti%2C+Kec.+Muara+Satu%2C+Kota+Lhokseumawe%2C+Aceh+24355"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="mt-5 inline-flex items-center gap-2 rounded-xl bg-brand-600 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-brand-700"
+                        >
+                            <span>🧭</span>
+                            Buka di Google Maps
+                        </a>
+                    </div>
+
+                    <div class="overflow-hidden rounded-2xl border border-stone-200 bg-stone-100">
+                        <iframe
+                            src="https://www.google.com/maps?q=633H%2B3QM%2C%20Padang%20Sakti%2C%20Kec.%20Muara%20Satu%2C%20Kota%20Lhokseumawe%2C%20Aceh%2024355&output=embed"
+                            width="100%"
+                            height="260"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Lokasi Dapur Mama Rina"
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     {{-- Footer --}}
     <footer class="border-t border-stone-200 bg-stone-50 py-8">
